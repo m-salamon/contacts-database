@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		
+		td,
+		th {
+			border: 1px solid black;
+			padding: 4px 6px;
+		}
+		
+		.dialog {
+			display: none;
+			width: 256px;
+			height: 126px;
+			background-color: lightblue;
+			padding: 5px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -128px;
+			margin-top: -63px;
+			box-sizing: border-box;
+		}
+		
+		.dialog label {
+			width: 74px;
+			display: inline-block;
+		}
+		
+		.buttons {
+			text-align: center;
+			margin-top: 6px;
+		}
+        .deleteIcon{
+            
+        }
+        .deleteIcon:hover{
+                
+        }
+	</style>
+</head>
+
+<body>
+	<table id="contacts">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="4">No Contacts</td>
+			</tr>
+		</tbody>
+	</table>
+	<button id="loadContacts">Load Contacts</button>
+	<button id="addContact">Add Contact</button>
+
+	<div id="dialog" class="dialog">
+		<form id="addContactForm">
+			<label>First Name</label>
+			<input id="firstName" required/>
+			<label>Last Name</label>
+			<input id="lastName"/>
+			<label>Email</label>
+			<input id="email" type="email" required/>
+			<label>Phone</label>
+			<input id="phone" required/>
+			<div class="buttons">
+				<button id="ok">OK</button>
+				<button id="cancel" type="button">Cancel</button>
+			</div>
+		</form>
+	</div>
+
+	<script src="//cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+	<script src="/jsmessageBox/messageBox.js"></script>
+	<script src="contacts.js"></script>
+</body>
+
+</html>
